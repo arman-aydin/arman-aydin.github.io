@@ -101,8 +101,7 @@ hide_description: true
 ## Technical Skills
 
 - **Languages:** Python (PyTorch, Numpy, Pandas, Matplotlib, TensorFlow), C, C++, JavaScript, Java, TypeScript, SQL, Julia, Go
-- **Frameworks:** HTML/CSS, React, Flask, Node.js, Express, Bootstrap, Tailwind CSS, Docker, Unix, Git, Scikit-learn, MongoDB, AWS, Pytest, PostgreSQ
-
+- **Frameworks:** HTML/CSS, React, Flask, Node.js, Express, Bootstrap, Tailwind CSS, Docker, Unix, Git, Scikit-learn, MongoDB, AWS, Pytest, PostgreSQL
 
 <!-- 
 ## Features
