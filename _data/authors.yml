@@ -3,22 +3,21 @@
 # Change `author1` to your shortname.
 author1:
   name:              Arman Aydın
-  email:             aaydin@cs.stanford.edu
+  email:             armanaydin01@gmail.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    I'm currently a Master's student in Computer Science at Stanford University, where I also completed my Bachelor's degree in Computer Science (2020-2024). 
-    I particularly enjoy tackling challenging software problems at the intersection of AI, Distributed Systems, and Networking.
+    I'm a Software Engineer II at Box Inc. on the AI/Agents team. I recently graduated from Stanford University with a Master of Science in Computer Science (Jan 2024 – Jun 2025) and a Bachelor of Science in Computer Science (Sep 2020 – Jun 2024). 
+    I particularly enjoy tackling challenging software problems at the intersection of AI, Distributed Systems, and Systems for ML.
     
-    At Stanford, I've contributed to the Stanford Vision & Learning Lab, where I worked on BEHAVIOR-1K, a human-centered embodied AI benchmark. 
-    I've also worked in the Stanford NLP Group on Stanza, a Stanford-developed natural language analysis package that supports over 70 languages.
+    At Stanford, I was a Research Assistant at the Stanford Vision & Learning Lab (SVL), where I worked on the BEHAVIOR-1K embodied AI benchmark. 
+    I also worked in the Stanford NLP Group on Stanza, a Stanford-developed natural language analysis package supporting over 70 languages.
     
-    Beyond academics, I've been teaching at Stanford since my freshman year. For three years, I tutored for the Center for Teaching and Learning in
-    courses including CS106A/B, CS103, CS107, CS109, CS111, and CS161. Since 2023, I've been serving as a Teaching Assistant for CS107, and this will 
-    be my seventh time TA'ing this class.
+    During my time at Stanford, I was also heavily involved in teaching. For three years, I tutored for the Center for Teaching and Learning in
+    courses including CS106A/B, CS103, CS107, CS109, CS111, and CS161, and served as a Teaching Assistant for CS107.
     
-    You can reach me at: `aaydin[at]cs[dot]stanford[dot]edu`!
+    You can reach me at: `armanaydin01[at]gmail[dot]com`!
     
   # This photo will be used in the about section
   picture:

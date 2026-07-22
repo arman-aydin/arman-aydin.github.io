@@ -20,88 +20,87 @@ hide_description: true
 
 **Stanford University**
 
-  - **Master of Science in Computer Science** (Sep 2023 - Jan 2026)
-    - *Relevant Coursework:* Machine Learning, Reinforcement Learning, Computer Vision, Natural Language Processing, Machine
- Learning with Graphs, Statistical Inference, Linear Dynamical Systems, Systems for Machine Learning
+  - **Master of Science in Computer Science** (Jan 2024 – Jun 2025)
+    - *Relevant Coursework:* Machine Learning, Reinforcement Learning, Computer Vision, Natural Language Processing, Machine Learning with Graphs, Statistical Inference, Linear Dynamical Systems, Systems for Machine Learning
 
-  - **Bachelor of Science in Computer Science** (Sep 2020 - Jun 2024)
-    - *Relevant Coursework:*  Data Structures and Algorithms, Parallel Computing,
- Operating Systems, Computer Networking, Compilers, Database Systems, Embedded Systems, Compiler Optimizations,
- Cryptography, Computer and Network Security
-
-<!-- ![](assets\img\SU_Seal_Red_128.png) |  
-:-------------------------:|:-------------------------:
-![](assets\img\SU_Seal_Red_128.png) |  B.Sc Computer Science (Sep 2020 - Jun 2024) -->
+  - **Bachelor of Science in Computer Science** (Sep 2020 – Jun 2024)
+    - *Relevant Coursework:* Data Structures and Algorithms, Parallel Computing, Operating Systems, Computer Networking, Compilers, Database Systems, Embedded Systems, Compiler Optimizations, Cryptography, Computer and Network Security
 
 ## Work Experience
 
-**Software Engineer**, *Stanford Vision and Learning Lab (SVL)* | (Jan 2024 - Sep 2024)
+**Software Engineer II**, *Box Inc.* | (Jul 2025 – Present)
 
-> Technologies: Python, PyTorch, 3ds Max, JavaScript, Julia, Git
+> Technologies: Python, PyTorch, Docker, Kubernetes, Kedro, Prefect, Braintrust
+
+- Architected synthetic data generation pipelines using Kedro, modeling open-source datasets as graphs; designed graph-traversal based algorithms (modeled on the MuSiQue framework) to programmatically construct complex, multi-hop reasoning benchmarks for enterprise-specific contexts.
+- Designed and deployed an online grading pipeline modeled after Anthropic’s CLIO pipeline for emergent hierarchical clustering of user activity; for offline grading, utilized Braintrust for trajectory tracing and integrated automated stability metrics using semantic entropy and self-consistency variance.
+- Engineered a high-throughput automated evaluation infrastructure integrated directly into the CI/CD pipeline; orchestrated containerized batch workloads to execute 10,000+ daily test cases, enforcing empirical quality baselines critical to the General Availability (GA) launch of the Box Agents platform (scaling to 1M+ users).
+
+**Research Assistant**, *Stanford Vision and Learning Lab (SVL)* | (Mar 2023 – Sep 2024)
+
+> Technologies: NVIDIA IsaacSim, PyTorch, Autodesk 3ds Max, Dask, DVC
 
 - Contributed on the convex mesh data pipeline for BEHAVIOR-1K, a benchmark for evaluating Embodied AI solutions through interactive household activities with physics simulations supervised by Dr. Fei-Fei Li.
-
-- Developed teleoperation features for OmniGibson, Stanford-developed robot/environment simulation platform built on top of NVIDIA’s IsaacSim, including operating the robot simulation with Nintendo Joy-Cons and an Adafruit Gamepad with VR headset.
-
-- Closed support tickets for bugs reported in demos and extended support for slicing and dicing features.
-
 - Scripting in Autodesk 3ds Max, integrating CoACD performance metrics, where achieved up to 39% speed-up in internal sanity check scripts for integrity checks of physics simulations.
+- Developed teleoperation features for OmniGibson, Stanford-developed robot/environment simulation platform built on top of NVIDIA’s IsaacSim, designing a VR-based trajectory collection pipeline to capture high-fidelity human demonstrations for transfer learning and offline reinforcement learning (RL) frameworks.
 
-**Systems Engineer Intern**, *BAYKAR Technologies* | (Jun 2023 – Sep 2023) 
-
-> Technologies: C++, JavaScript, Node.js, React, Pandas, SQL, PostgreSQL, Go
-
-- Contributed to internal features for data aggregation/parsing and SQL Query optimization. Spearheaded an application for optimizing distribution chains through generating and solving real-life shortest-path problems through Dijkstra’s, Floyd–Warshall, Johnson’s and A* Search Algorithms, achieving an overall %7 speed-up in August 2023.
-
-**NLP Research Assistant**, *Stanford NLP Group* | (Jun 2022 – Sep 2022)
+**CURIS Research Assistant**, *Stanford NLP Group* | (Jun 2022 – Sep 2022)
 
 > Technologies: PyTorch, TensorFlow, Numpy, SQL, Bash Script, JavaScript, Pytest
 
-- Implemented Named Entity Recognition (NER) language models for low-resource languages Kazakh (95% F1-score) and Uyghur (77% F1-score) utilizing syntactic similarities across high-resource languages like Turkish through transfer learning (supervised by Dr. John Bauer and Dr. Chris Manning).
+- Implemented Named Entity Recognition (NER) language models for low-resource languages Kazakh (95% F1-score) and Uyghur (77% F1-score) by leveraging cross-lingual syntactic similarities with high-resource languages like Turkish through transfer learning (supervised by Dr. John Bauer and Dr. Chris Manning).
+- Enhanced the Stanford-developed Stanza natural language analysis package, achieving an 11% increase in parsing speed for nested NER tags, and added generalized transliteration across scripts and word span correction features.
 
-- Enhanced the Stanford-developed Stanza natural language analysis package, with an 11% increase in parsing speed for nested NERtags, and added generalized transliteration across scripts and word span correction features.
+## Publications & Selected Projects {#projects}
 
-**Software Engineer Intern**, *Infina Software Inc.* | (Jun 2021 - Aug 2021)
+### Publications
 
-> Technologies: Node.js, Express, TypeScript, Docker, AWS, MongoDB, Flask
+**BEHAVIOR Vision Suite: Customizable Dataset Generation via Simulation** ([Paper](https://arxiv.org/abs/2405.09546), [Website](https://behavior-vision-suite.github.io/))
+*Presented in CVPR 2024*
 
-- Automated and cleaned fund analysis data pipelines to achieve a 28% increase in processing speed. Implemented microservices for technical analysis indicators like the Relative Strength Index (RSI) and Moving Average Convergence Divergence (MACD).
+**BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation** ([Paper](https://arxiv.org/abs/2403.09227), [Website](https://behavior.stanford.edu/))
+*Presented in CoRL 2023*
 
-## Publications
+### Selected Projects
 
-**BEHAVIORVision Suite: Customizable Dataset Generation via Simulation** ([Paper](https://arxiv.org/abs/2405.09546), [Website](https://behavior-vision-suite.github.io/))
+**vllm-lite: Lightweight vLLM Inference Engine**
 
-*CVPR 2024 Highlight*
+> Technologies: PyTorch, Triton, PagedAttention, Continuous Batching
 
-> Ge*, Yunhao, Yihe Tang*, Jiashu Xu*, Cem Gokmen*, Chengshu Li, Wensi Ai, Benjamin Jose Martinez, et al. 2024. “BEHAVIOR Vision Suite: Customizable Dataset Generation via Simulation.” In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition
+- Built a high-performance LLM inference engine featuring a continuous batching scheduler with recomputation preemption and a custom, fused Triton PagedAttention decode kernel to dynamically manage non-contiguous KV cache blocks.
+- Integrated FlashAttention for accelerated prefill computation and consolidated concurrent decodes into unified forward passes, achieving a 4.25x boost in generation throughput and a 95% reduction in time-to-first-token (TTFT) latency.
 
-**BEHAVIOR-1K: A Benchmark for Embodied AI** ([Paper](https://arxiv.org/abs/2403.09227), [Website](https://behavior.stanford.edu/))
+**MixKVQ: Mixed-Precision KV Cache**
 
-*CoRL 2022 Oral, Best Paper Nominee*
+> Technologies: Triton, PyTorch, INT4/INT8 Bit-Packing
 
-> Li*, Chengshu, Ruohan Zhang*, Josiah Wong*, Cem Gokmen*, Sanjana Srivastava*, Roberto Martin-Martin*, Chen Wang*, et al. 2022. “BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation.” In 6th Annual Conference on Robot Learning.
+- Implemented the MixKVQ architecture by building a calibration pipeline to extract outlier scales, coupled with a custom Triton packing kernel that routes critical outliers to BF16 while quantizing non-outliers to INT4/INT8, achieving a 19.5x execution speedup.
+- Programmed a dequantizing FlashAttention kernel that executes on-the-fly dequantization directly in SRAM, reducing overall KV cache VRAM footprints by 40% (and isolated key caches by 64%) while matching full-precision logits to a 1e-2 tolerance.
 
+**Distributed Goal-Conditioned RL Pipeline for OGBench**
+
+> Technologies: Ray, PyTorch, Multi-GPU Orchestration, Simulation
+
+- Engineered a distributed training and rollout pipeline for goal-conditioned RL agents; orchestrated CPU-bound simulation pools via Ray remote actors and synchronized parameters using PyTorch Distributed Data Parallel (DDP) with centralized batch broadcasting.
+- Eliminated CPU-GPU bottlenecks to boost rollout throughput 30x (130 to 4,500 steps/s), utilizing Ray’s shared memory Plasma store for zero-copy weight updates and FP16 mixed precision (AMP) to accelerate optimization.
 
 ## Teaching
 
-**Teaching Assistant for CS 107**, *Stanford Computer Science Department* | (Sep 2023 - Present)
+**Teaching Assistant for CS 107**, *Stanford Computer Science Department* | (Sep 2023 - Jun 2025)
 
 > Technologies: C, x86 Assembly, GNU Debugger (GDB), Valgrind, GNU Compiler Collection (GCC)
 
-- Taught a 1.5 hour hands-on section to 25 students and held 6 hours of Office Hours per week. Proofread and exams, answering questions on Ed Discussion daily. Approximately 250 student enrollment per quarter.
-
-- Topics include: the C programming language, data representation, machine-level code, computer arithmetic, elements of code compilation, memory organization and management, and performance evaluation and optimization.
+- Led hands-on discussion sections and held weekly office hours for a core systems programming class.
+- Topics covered include: C programming, data representation, machine-level x86-64 assembly, memory organization and custom allocation, and systems optimization.
 
 **Peer Tutor for Computer Science**, *Stanford Center for Teaching and Learning* | (Mar 2021 - Jun 2023)
 
-- Peer academic tutor for Stanford Center for Teaching and Learning, providing Stanford students with one-on-one help free of charge.
-
-- Tutored for all the core classes of the Computer Science major: CS106A/B, CS103, CS107, CS109, CS111, and CS161.
+- Provided one-on-one academic tutoring for core Computer Science courses (CS106A/B, CS103, CS107, CS109, CS111, CS161).
 
 ## Technical Skills
 
-- **Languages:** Python (PyTorch, Numpy, Pandas, Matplotlib, TensorFlow), C, C++, JavaScript, Java, TypeScript, SQL, Julia, Go
-- **Frameworks:** HTML/CSS, React, Flask, Node.js, Express, Bootstrap, Tailwind CSS, Docker, Unix, Git, Scikit-learn, MongoDB, AWS, Pytest, PostgreSQL
+- **Languages:** Python, C, C++, Rust, JavaScript, TypeScript, SQL, Julia
+- **Frameworks:** PyTorch, Triton, Node.js, Docker, Kubernetes, Scikit-learn, HuggingFace, vLLM, AWS
 
 <!-- 
 ## Features

@@ -43,7 +43,7 @@ logo:                  /assets/img/logo.png
 author:
   # Used by `jekyll-feed`:
   name:                Arman Aydın
-  email:               aaydin@cs.stanford.edu
+  email:               armanaydin01@gmail.com
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
@@ -52,11 +52,11 @@ menu:
   - title:             About Me
     url:               /about/
   - title:             Resume
-    url:               /resume/
+    url:               /resume/Arman_Aydin_Resume.pdf
   - title:             Projects
-    url:               /examples/
-  # - title:              Posts
-  #   url:                /posts/
+    url:               /about/#projects
+  - title:             Blog
+    url:               /posts/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -174,7 +174,7 @@ defaults:
         type:          WebPage
 
 kramdown:
-  math_engine:         katex
+  math_engine:         mathjax
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
 
