@@ -77,12 +77,13 @@ hide_description: true
 - Implemented the MixKVQ architecture by building a calibration pipeline to extract outlier scales, coupled with a custom Triton packing kernel that routes critical outliers to BF16 while quantizing non-outliers to INT4/INT8, achieving a 19.5x execution speedup.
 - Programmed a dequantizing FlashAttention kernel that executes on-the-fly dequantization directly in SRAM, reducing overall KV cache VRAM footprints by 40% (and isolated key caches by 64%) while matching full-precision logits to a 1e-2 tolerance.
 
-**Distributed Goal-Conditioned RL Pipeline for OGBench**
+**deepGCRL-Bench: Decoupled Multi-GPU Post-Training for Goal-Conditioned Diffusion Policies** ([GitHub](https://github.com/arman-aydin/deepGCRL-Bench), [Blog Post](/2026-10-14-scaling-goal-conditioned-rl-pipelined-disaggregated/))
 
-> Technologies: Ray, PyTorch, Multi-GPU Orchestration, Simulation
+> Technologies: PyTorch, CUDA IPC, Ray, FSDP2, Diffusion Transformers, Distributed Systems
 
-- Engineered a distributed training and rollout pipeline for goal-conditioned RL agents; orchestrated CPU-bound simulation pools via Ray remote actors and synchronized parameters using PyTorch Distributed Data Parallel (DDP) with centralized batch broadcasting.
-- Eliminated CPU-GPU bottlenecks to boost rollout throughput 30x (130 to 4,500 steps/s), utilizing Ray’s shared memory Plasma store for zero-copy weight updates and FP16 mixed precision (AMP) to accelerate optimization.
+- Architected a 4-stage evolutionary post-training pipeline for 232M-parameter Diffusion Transformer (DiT) policies, eliminating lockstep idling and scaling decentralized sampling to 24.5M transitions/sec.
+- Eliminated host-memory serialization bottlenecks in Ray Plasma (>3.1s sync) by engineering peer-to-peer CUDA IPC streams, reducing parameter synchronization latency to 10.63 ms (300x acceleration).
+- Implemented dual-stream concurrency with double-buffered ping-pong parameter weights, achieving 100% latency hiding and an atomic 3.8 µs zero-bubble parameter handoff between trainer and rollout engines.
 
 ## Teaching
 
